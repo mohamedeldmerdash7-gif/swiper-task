@@ -1,32 +1,15 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
-import { Swiper, SwiperSlide } from 'swiper/react';
+import React from 'react';
+import Photoslide from "./components/Photoslide";
 
 
-import 'swiper/css';
+function app() {
+return(<div>
+ <h1 className='text-center text-2x1 font-bold my-6'>swiper</h1>
+<Photoslide></Photoslide>
+ </div>) 
+ 
 
-function App() {
-  const [count, setCount] = useState(0)
+};
 
-  return (
-    <>
-     <Swiper
-      spaceBetween={50}
-      slidesPerView={3}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
-    >
-      <SwiperSlide>Slide 1</SwiperSlide>
-      <SwiperSlide>Slide 2</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
-      <SwiperSlide>Slide 4</SwiperSlide>
-      ...
-    </Swiper>
-    </>
-  )
-}
 
-export default App
+export default app;
